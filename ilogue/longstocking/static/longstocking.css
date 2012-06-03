@@ -1,0 +1,32 @@
+body {font-family: Verdana, sans-serif;background-color: #F0F0F0;}
+h3 {font-family: Helvetica, Arial, sans-serif;}
+dt {font-style: italic;}
+dd {padding: 5px;}
+input {display: block; padding: 4px;}
+textarea {border: 2px solid #cccccc;}
+.nav {
+    font-family: Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    margin-left: 10px;}
+.nav:hover {text-decoration: underline;}
+.embedded {text-decoration: none;color: black;}
+.embedded:hover {text-decoration: underline;}
+.container {padding: 10px;}
+.understated {font-size: 0.7em; 
+    color: grey;}
+.centerstage {
+    margin-left:auto;
+    margin-right:auto;
+    width: 900px;}
+.review {
+    border-top: 1px solid black;
+    padding: 10px;}
+#header {height: 100%;}
+#content {
+    min-height: 500px;
+    background-color: white;
+    }
+#footer {}
+#versions {font-size: 0.7em; 
+    color: grey;}
+

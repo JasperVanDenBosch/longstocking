@@ -1,0 +1,5 @@
+*.pyc
+*~
+dist/
+env/
+longstocking.egg-info/
