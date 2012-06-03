@@ -24,12 +24,13 @@ class Package(object):
             raise KeyError
 
     def loadFiles(self):
+        matchedFiles = []
         for f in os.listdir(self.cacheDir):
             if fnmatch.fnmatch(f.lower(), self.name+'*.tar.gz'):
-                filelist.append(f)
-        if len(filelist) == 0:
+                matchedFiles.append(f)
+        if len(matchedFiles) == 0:
             self.proxy.getLatestArtifactForPackage(self.name)
-        for f in filelist:
+        for f in matchedFiles:
             a = Artifact(self.request, self, f)
             self.artifacts.append(a)
 
