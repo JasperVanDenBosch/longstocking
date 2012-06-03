@@ -1,5 +1,4 @@
-import os, time
-from glob import glob
+import os, time, fnmatch
 from ilogue.longstocking.Artifact import Artifact
 from ilogue.longstocking.Proxy import Proxy
 
@@ -25,10 +24,11 @@ class Package(object):
             raise KeyError
 
     def loadFiles(self):
-        filelist = glob(os.path.join(self.cacheDir,self.name+'*'))
+        for f in os.listdir(self.cacheDir):
+            if fnmatch.fnmatch(f.lower(), self.name+'*.tar.gz')
+                filelist.append(f)
         if len(filelist) == 0:
             self.proxy.getLatestArtifactForPackage(self.name)
-            time.sleep(0.1)
         for f in filelist:
             a = Artifact(self.request, self, f)
             self.artifacts.append(a)
