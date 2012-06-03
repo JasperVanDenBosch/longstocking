@@ -5,6 +5,7 @@ requires = [
     'pyramid',
     'waitress',
     'pyramid_debugtoolbar',
+    'Paste'
     ]
 
 setup(name='longstocking',
