@@ -17,6 +17,7 @@
     </div>
     <div id="content" class="container">
         <div class="centerstage">
+            <h3>Longstocking Pypi server</h3>
             ${self.body()}
         </div>
     </div>

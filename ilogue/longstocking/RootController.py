@@ -12,7 +12,7 @@ class RootController(object):
         request_method='GET',
         renderer='root.mak')
     def get_root(self):
-        return {}
+        return {'root':self.request.context}
 
     @view_config(
         context='ilogue.longstocking.Root:Root',
