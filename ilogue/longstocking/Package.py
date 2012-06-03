@@ -25,7 +25,7 @@ class Package(object):
 
     def loadFiles(self):
         for f in os.listdir(self.cacheDir):
-            if fnmatch.fnmatch(f.lower(), self.name+'*.tar.gz')
+            if fnmatch.fnmatch(f.lower(), self.name+'*.tar.gz'):
                 filelist.append(f)
         if len(filelist) == 0:
             self.proxy.getLatestArtifactForPackage(self.name)
