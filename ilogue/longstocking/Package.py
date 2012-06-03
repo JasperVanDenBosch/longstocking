@@ -28,6 +28,8 @@ class Package(object):
         for f in os.listdir(self.cacheDir):
             if fnmatch.fnmatch(f.lower(), self.name+'*.tar.gz'):
                 matchedFiles.append(f)
+            elif fnmatch.fnmatch(f.lower(), self.name+'*.zip'):
+                matchedFiles.append(f)
         if len(matchedFiles) == 0:
             self.proxy.getLatestArtifactForPackage(self.name)
         for f in matchedFiles:
